@@ -1,3 +1,7 @@
 name: 'PSCheck'
 author: 'SleepySysAdmin '
 description: 'GitHub Action to check PowerShell syntax with PSScriptAnalyzer'
+runs: 
+    using: 'docker'
+    image: 'Dockerfile'
+  
