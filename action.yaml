@@ -1,0 +1,3 @@
+name: 'PSCheck'
+author: 'SleepySysAdmin '
+description: 'GitHub Action to check PowerShell syntax with PSScriptAnalyzer'
