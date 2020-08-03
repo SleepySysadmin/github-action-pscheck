@@ -1,4 +1,5 @@
 #! /usr/bin/pwsh
+Import-Module PSScriptAnalyzer -Force
 
 $tests = Invoke-ScriptAnalyzer -Path $GITHUB_WORKSPACE -Settings PSGallery -Recurse
 
