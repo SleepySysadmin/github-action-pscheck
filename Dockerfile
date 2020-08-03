@@ -1,5 +1,4 @@
-FROM mcr.microsoft.com/powershell
-RUN pwsh -Command Install-Module -Name PSScriptAnalyzer -Force
+FROM aryerson9/psscriptanalyzer
 
 COPY entrypoint.ps1 /entrypoint.ps1
 RUN chmod +x /entrypoint.ps1
