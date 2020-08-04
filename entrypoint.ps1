@@ -1,8 +1,6 @@
 #! /usr/bin/pwsh
 
-ls /root/.local/share/powershell/Modules
-
-Import-Module PSScriptAnalyzer -Force
+Import-Module -Name /root/.local/share/powershell/Modules -Verbose -Force
 
 $tests = Invoke-ScriptAnalyzer -Path $GITHUB_WORKSPACE -Settings PSGallery -Recurse
 
