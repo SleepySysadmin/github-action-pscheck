@@ -5,7 +5,7 @@ Import-Module -Name /root/.local/share/powershell/Modules/PSScriptAnalyzer/ -Ver
 
 Get-Variable
 
-$tests = Invoke-ScriptAnalyzer -Path $GITHUB_WORKSPACE -Settings PSGallery -Recurse
+$tests = Invoke-ScriptAnalyzer -Path /github/workspace -Settings PSGallery -Recurse
 
 foreach ($test in $tests)
 {
