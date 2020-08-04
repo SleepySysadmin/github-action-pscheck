@@ -1,6 +1,6 @@
 #! /usr/bin/pwsh
 
-Get-Module -ListAvailable
+ls /root/.local/share/powershell/Modules
 
 Import-Module PSScriptAnalyzer -Force
 
