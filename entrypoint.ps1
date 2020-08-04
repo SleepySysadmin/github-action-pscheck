@@ -1,6 +1,9 @@
 #! /usr/bin/pwsh
 
+## Explicitly have to import the module from its path
 Import-Module -Name /root/.local/share/powershell/Modules/PSScriptAnalyzer/ -Verbose -Force
+
+Get-Variable
 
 $tests = Invoke-ScriptAnalyzer -Path $GITHUB_WORKSPACE -Settings PSGallery -Recurse
 
