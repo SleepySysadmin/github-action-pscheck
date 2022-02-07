@@ -12,17 +12,13 @@ $tests = Invoke-ScriptAnalyzer -Path /github/workspace -Settings PSGallery -Recu
 foreach ($test in $tests)
 {
 
-    $Severity = $test.Severity
-    $Message = $test.Message
-    $Line = $test.Line
-
-    if ($Severity -like "*Error*")
+    if ($($test.Severity) -like "*Error*")
     {
 
         $errorHash = @{
-            Severity = $Severity
-            Message  = $Message
-            Line     = $Line
+            Severity = $($test.Severity)
+            Message  = $($test.Message)
+            Line     = $($test.Line)
         }
 
         $errorOutput = New-Object -TypeName System.Management.Automation.PSObject -Property $errorHash
