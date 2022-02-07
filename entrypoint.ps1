@@ -12,7 +12,7 @@ $tests = Invoke-ScriptAnalyzer -Path /github/workspace -Settings PSGallery -Recu
 foreach ($test in $tests)
 {
 
-    if ($Severity -like "*Error*")
+    if ($($test.Severity) -like "*Error*")
     {
 
         $errorHash = @{
